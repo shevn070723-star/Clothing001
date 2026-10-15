@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATELIER — Contemporary fashion and lifestyle clothing. Timeless essentials, modern expression, and uncompromising craftsmanship.">
+  <title>ATELIER — Define Your Own Style | Contemporary Fashion</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22 fill=%22%23121212%22>A</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond (Serif) & Plus Jakarta Sans (Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================= -->
+  <!-- 1. ANNOUNCEMENT BAR                                       -->
+  <!-- ========================================================= -->
+  <aside class="announcement-bar" id="announcement-bar">
+    <div class="announcement-inner">
+      <span class="announcement-badge">EDITION 04 / 2026</span>
+      <p class="announcement-text">AUTUMN / WINTER COLLECTION ARRIVING GLOBALLY — ENJOY COMPLIMENTARY SHIPPING ON ORDERS OVER $250</p>
+      <button type="button" class="announcement-close" id="close-announcement" aria-label="Close Announcement">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- 2. PREMIUM NAVIGATION                                     -->
+  <!-- ========================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo (Left) -->
+      <a href="#hero" class="brand-logo" aria-label="ATELIER Home">
+        <span class="logo-text">ATELIER</span>
+        <span class="logo-sub">STUDIO</span>
+      </a>
+
+      <!-- Navigation Links (Center) -->
+      <nav class="main-navigation" id="main-navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#featured" class="nav-link">Collections</a></li>
+          <li class="nav-item"><a href="#story" class="nav-link">Brand Story</a></li>
+          <li class="nav-item"><a href="#bestsellers" class="nav-link">Best Sellers</a></li>
+          <li class="nav-item"><a href="#campaign" class="nav-link">Campaign</a></li>
+          <li class="nav-item"><a href="#newsletter" class="nav-link">A Note</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Search & Shopping Bag) -->
+      <div class="header-actions">
+        <!-- Quick Search Toggle -->
+        <button type="button" class="action-btn" id="search-toggle-btn" aria-label="Search Collection">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="action-label">Search</span>
+        </button>
+
+        <!-- Shopping Bag Trigger -->
+        <button type="button" class="action-btn bag-btn" id="bag-toggle-btn" aria-label="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="bag-count" id="bag-count">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Collapsible Search Bar Overlay -->
+    <div class="search-drawer" id="search-drawer">
+      <div class="search-drawer-inner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="site-search-input" placeholder="Search tailored blazers, silk tops, cashmere knitwear..." autocomplete="off">
+        <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-suggestions" id="search-suggestions">
+        <span class="suggestion-tag" data-query="blazer">Tailored Blazer</span>
+        <span class="suggestion-tag" data-query="trench">Double-Breasted Trench</span>
+        <span class="suggestion-tag" data-query="silk">Mulberry Silk</span>
+        <span class="suggestion-tag" data-query="trouser">Pleated Trouser</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <span class="mobile-brand">ATELIER</span>
+        <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#featured" class="mobile-nav-link"><span class="m-num">01</span> Collections</a></li>
+        <li><a href="#story" class="mobile-nav-link"><span class="m-num">02</span> Brand Story</a></li>
+        <li><a href="#bestsellers" class="mobile-nav-link"><span class="m-num">03</span> Best Sellers</a></li>
+        <li><a href="#campaign" class="mobile-nav-link"><span class="m-num">04</span> Campaign</a></li>
+        <li><a href="#newsletter" class="mobile-nav-link"><span class="m-num">05</span> A Note</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <p class="m-edition">AUTUMN / WINTER 2026</p>
+        <p class="m-tagline">Timeless essentials. Modern expression.</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ========================================================= -->
+    <!-- 3. FULL-SCREEN HERO SECTION                               -->
+    <!-- ========================================================= -->
+    <section class="hero-section" id="hero" aria-label="Editorial Hero">
+      <div class="hero-media-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2200&q=85" 
+          alt="Contemporary fashion models wearing refined neutral atelier tailoring" 
+          class="hero-image"
+          loading="eager"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content-container">
+        
+        <div class="hero-meta-top reveal-fade">
+          <span class="hero-meta-tag">EDITION N° 04</span>
+          <span class="hero-meta-divider"></span>
+          <span class="hero-meta-tag">PARIS &bull; TOKYO &bull; NEW YORK</span>
+        </div>
+
+        <div class="hero-editorial-center">
+          <h1 class="hero-headline reveal-fade" style="--delay: 0.15s">
+            <span class="headline-row">DEFINE YOUR</span>
+            <span class="headline-row italic-accent">OWN STYLE</span>
+          </h1>
+
+          <p class="hero-subtitle reveal-fade" style="--delay: 0.3s">
+            Timeless essentials. Modern expression.
+          </p>
+
+          <div class="hero-cta-wrapper reveal-fade" style="--delay: 0.45s">
+            <a href="#featured" class="btn btn-primary" id="explore-collection-btn">
+              <span>EXPLORE COLLECTION</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-bottom-bar reveal-fade" style="--delay: 0.6s">
+          <div class="hero-caption-note">
+            <span class="note-index">LOOKBOOK 26.2</span>
+            <span class="note-detail">Tailored in sustainable virgin wool and raw organic silk</span>
+          </div>
+
+          <a href="#featured" class="hero-scroll-indicator" aria-label="Scroll to featured collection">
+            <span class="scroll-text">SCROLL</span>
+            <div class="scroll-line">
+              <span class="scroll-dot"></span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 4. FEATURED COLLECTION SECTION                            -->
+    <!-- ========================================================= -->
+    <section class="section featured-section" id="featured" aria-label="Featured Collection">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag-wrap">
+            <span class="section-tag">CURATED CHAPTERS</span>
+          </div>
+          <h2 class="section-title">Seasonal Curation</h2>
+          <p class="section-description">
+            Carefully distilled silhouettes designed to harmonize across versatile wardrobe combinations.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          
+          <!-- Category 1: New Arrivals -->
+          <article class="category-card reveal-on-scroll" style="--stagger: 0s">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85" 
+                alt="New Arrivals category feature — tailored modern outerwear" 
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="card-gradient-overlay"></div>
+              <span class="category-num">01</span>
+            </div>
+            <div class="category-info">
+              <span class="category-eyebrow">VOLUME 01 / FALL</span>
+              <h3 class="category-heading">New Arrivals</h3>
+              <p class="category-sub">Architectural cuts tailored for contemporary transition and effortless layer play.</p>
+              <a href="#bestsellers" class="category-link">
+                <span>View Collection</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 2: Everyday Essentials -->
+          <article class="category-card reveal-on-scroll" style="--stagger: 0.15s">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=85" 
+                alt="Everyday Essentials category feature — relaxed cashmere and organic cotton" 
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="card-gradient-overlay"></div>
+              <span class="category-num">02</span>
+            </div>
+            <div class="category-info">
+              <span class="category-eyebrow">VOLUME 02 / PERMANENT</span>
+              <h3 class="category-heading">Everyday Essentials</h3>
+              <p class="category-sub">Quiet staples crafted from breathable organic fibers engineered for all-day ease.</p>
+              <a href="#bestsellers" class="category-link">
+                <span>View Collection</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 3: Statement Pieces -->
+          <article class="category-card reveal-on-scroll" style="--stagger: 0.3s">
+            <div class="card-media">
+              <img 
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=85" 
+                alt="Statement Pieces category feature — high-contrast dramatic silhouettes" 
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="card-gradient-overlay"></div>
+              <span class="category-num">03</span>
+            </div>
+            <div class="category-info">
+              <span class="category-eyebrow">VOLUME 03 / SIGNATURE</span>
+              <h3 class="category-heading">Statement Pieces</h3>
+              <p class="category-sub">Sculptural silhouettes and bold proportions created to command understated presence.</p>
+              <a href="#bestsellers" class="category-link">
+                <span>View Collection</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. BRAND STORY SECTION                                    -->
+    <!-- ========================================================= -->
+    <section class="section story-section" id="story" aria-label="Brand Story">
+      <div class="container">
+        
+        <div class="story-layout">
+          
+          <!-- Editorial Story Image (Left) -->
+          <div class="story-visual-column reveal-on-scroll">
+            <div class="story-image-frame">
+              <img 
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=85" 
+                alt="ATELIER design craftsmanship and fine fabric tactile details" 
+                class="story-main-image"
+                loading="lazy"
+              >
+              <div class="story-image-badge">
+                <span class="badge-title">ATELIER ARCHIVE</span>
+                <span class="badge-sub">04 // CONCEPTUAL DESIGN</span>
+              </div>
+            </div>
+            <div class="story-secondary-caption">
+              <p class="caption-text">“True elegance is not when there is nothing left to add, but when nothing left can be taken away.”</p>
+            </div>
+          </div>
+
+          <!-- Editorial Story Narrative (Right) -->
+          <div class="story-text-column reveal-on-scroll">
+            
+            <div class="story-eyebrow-wrap">
+              <span class="story-eyebrow">THE PHILOSOPHY</span>
+              <span class="story-year">N° 2026</span>
+            </div>
+
+            <h2 class="story-headline">
+              “LESS, BUT <span class="italic-serif">BETTER.”</span>
+            </h2>
+
+            <div class="story-body-content">
+              <p class="story-lead">
+                At ATELIER, we build garments around restraint rather than noise. In a world saturated with fleeting trends, our vision is rooted in enduring simplicity, tactile discernment, and architectural proportions.
+              </p>
+              <p class="story-paragraph">
+                Every piece begins with raw, uncompromised material: unbleached organic cotton, cruelty-free mulberry silk, and regenerative alpine virgin wool. We collaborate with generational European textile houses who preserve the meticulous discipline of hand-finished seams, sculpted lapels, and timeless silhouettes.
+              </p>
+            </div>
+
+            <!-- Pillars of Craftsmanship -->
+            <div class="story-pillars">
+              
+              <div class="pillar-item">
+                <div class="pillar-header">
+                  <span class="pillar-num">01</span>
+                  <h4 class="pillar-title">Mindful Materiality</h4>
+                </div>
+                <p class="pillar-desc">Single-origin textiles harvested through regenerative agriculture and low-impact vegetable dyeing.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-header">
+                  <span class="pillar-num">02</span>
+                  <h4 class="pillar-title">Architectural Drape</h4>
+                </div>
+                <p class="pillar-desc">Engineered pattern-cutting that moves intuitively with the body while retaining clean, crisp definition.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-header">
+                  <span class="pillar-num">03</span>
+                  <h4 class="pillar-title">Generational Longevity</h4>
+                </div>
+                <p class="pillar-desc">Reinforced double-stitching and high-twist yarns crafted to endure decades of considered wear.</p>
+              </div>
+
+            </div>
+
+            <div class="story-signature-block">
+              <div class="signature-emblem">ATELIER</div>
+              <div class="signature-details">
+                <span class="sig-name">Maison Atelier</span>
+                <span class="sig-role">Design & Research Directorate</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. BEST SELLERS SECTION                                   -->
+    <!-- ========================================================= -->
+    <section class="section bestsellers-section" id="bestsellers" aria-label="Best Sellers">
+      <div class="container">
+        
+        <div class="section-header-row reveal-on-scroll">
+          <div class="header-left">
+            <span class="section-tag">TIMELESS ICONS</span>
+            <h2 class="section-title">Best Sellers</h2>
+          </div>
+          <div class="header-right">
+            <p class="section-description">
+              Our most celebrated foundational silhouettes, celebrated for their drape, precision tailoring, and versatility.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Premium Product Cards Grid -->
+        <div class="products-grid">
+          
+          <!-- Product Card 1 -->
+          <article class="product-card reveal-on-scroll" data-product-id="prod-1">
+            <div class="product-media-wrap">
+              <div class="product-badge">BESTSELLER</div>
+              <img 
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Sculpted Cashmere Blazer in Oat" 
+                class="product-img primary-img"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Sculpted Cashmere Blazer detail view" 
+                class="product-img secondary-img"
+                loading="lazy"
+              >
+              
+              <!-- Quick Add Action Button -->
+              <button type="button" class="quick-add-btn" aria-label="Quick Add The Sculpted Cashmere Blazer to bag">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Quick Add</span>
+              </button>
+            </div>
+
+            <div class="product-meta">
+              <div class="product-top-row">
+                <span class="product-category">Tailoring</span>
+                <span class="product-price">$480</span>
+              </div>
+              <h3 class="product-title">The Sculpted Cashmere Blazer</h3>
+              <p class="product-fabric">Grade-A Mongolian Cashmere &bull; Relaxed Lapel</p>
+              
+              <div class="product-selectors">
+                <!-- Color Swatches -->
+                <div class="color-swatches" aria-label="Choose color">
+                  <button type="button" class="color-dot active" style="--swatch-color: #D3C7B6" title="Oat Sand" data-color="Oat Sand"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #2D2C2A" title="Charcoal" data-color="Charcoal"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #52473D" title="Espresso" data-color="Espresso"></button>
+                </div>
+
+                <!-- Size Options -->
+                <div class="size-options" aria-label="Choose size">
+                  <button type="button" class="size-pill" data-size="XS">XS</button>
+                  <button type="button" class="size-pill active" data-size="S">S</button>
+                  <button type="button" class="size-pill" data-size="M">M</button>
+                  <button type="button" class="size-pill" data-size="L">L</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card reveal-on-scroll" data-product-id="prod-2" style="--stagger: 0.1s">
+            <div class="product-media-wrap">
+              <div class="product-badge">SIGNATURE</div>
+              <img 
+                src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Double-Breasted Trench in Neutral Sand" 
+                class="product-img primary-img"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Double-Breasted Trench alternate angle" 
+                class="product-img secondary-img"
+                loading="lazy"
+              >
+              
+              <!-- Quick Add Action Button -->
+              <button type="button" class="quick-add-btn" aria-label="Quick Add The Double-Breasted Trench to bag">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Quick Add</span>
+              </button>
+            </div>
+
+            <div class="product-meta">
+              <div class="product-top-row">
+                <span class="product-category">Outerwear</span>
+                <span class="product-price">$540</span>
+              </div>
+              <h3 class="product-title">The Double-Breasted Trench</h3>
+              <p class="product-fabric">Water-repellent Organic Cotton Twill &bull; Horn Buttons</p>
+              
+              <div class="product-selectors">
+                <div class="color-swatches" aria-label="Choose color">
+                  <button type="button" class="color-dot active" style="--swatch-color: #C2B6A3" title="Sand Khaki" data-color="Sand Khaki"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #1A1A1A" title="Noir" data-color="Noir"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #55574F" title="Muted Olive" data-color="Muted Olive"></button>
+                </div>
+
+                <div class="size-options" aria-label="Choose size">
+                  <button type="button" class="size-pill" data-size="XS">XS</button>
+                  <button type="button" class="size-pill" data-size="S">S</button>
+                  <button type="button" class="size-pill active" data-size="M">M</button>
+                  <button type="button" class="size-pill" data-size="L">L</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card reveal-on-scroll" data-product-id="prod-3" style="--stagger: 0.2s">
+            <div class="product-media-wrap">
+              <div class="product-badge">ESSENTIAL</div>
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Fluid Mulberry Silk Blouse" 
+                class="product-img primary-img"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Fluid Mulberry Silk Blouse detail drape" 
+                class="product-img secondary-img"
+                loading="lazy"
+              >
+              
+              <!-- Quick Add Action Button -->
+              <button type="button" class="quick-add-btn" aria-label="Quick Add The Fluid Mulberry Silk Blouse to bag">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Quick Add</span>
+              </button>
+            </div>
+
+            <div class="product-meta">
+              <div class="product-top-row">
+                <span class="product-category">Silk & Knitwear</span>
+                <span class="product-price">$295</span>
+              </div>
+              <h3 class="product-title">The Fluid Mulberry Silk Blouse</h3>
+              <p class="product-fabric">22-Momme Sandwashed Silk &bull; Mother of Pearl Buttons</p>
+              
+              <div class="product-selectors">
+                <div class="color-swatches" aria-label="Choose color">
+                  <button type="button" class="color-dot active" style="--swatch-color: #E8E0D5" title="Champagne" data-color="Champagne"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #F8F7F4" title="Pure Ivory" data-color="Pure Ivory"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #7D7971" title="Smoke Taupe" data-color="Smoke Taupe"></button>
+                </div>
+
+                <div class="size-options" aria-label="Choose size">
+                  <button type="button" class="size-pill" data-size="XS">XS</button>
+                  <button type="button" class="size-pill active" data-size="S">S</button>
+                  <button type="button" class="size-pill" data-size="M">M</button>
+                  <button type="button" class="size-pill" data-size="L">L</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card reveal-on-scroll" data-product-id="prod-4" style="--stagger: 0.3s">
+            <div class="product-media-wrap">
+              <div class="product-badge">ICON</div>
+              <img 
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Pleated Wide-Leg Wool Trouser" 
+                class="product-img primary-img"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" 
+                alt="The Pleated Wide-Leg Trouser drape view" 
+                class="product-img secondary-img"
+                loading="lazy"
+              >
+              
+              <!-- Quick Add Action Button -->
+              <button type="button" class="quick-add-btn" aria-label="Quick Add The Pleated Wide-Leg Trouser to bag">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Quick Add</span>
+              </button>
+            </div>
+
+            <div class="product-meta">
+              <div class="product-top-row">
+                <span class="product-category">Trousers</span>
+                <span class="product-price">$320</span>
+              </div>
+              <h3 class="product-title">The Pleated Wide-Leg Trouser</h3>
+              <p class="product-fabric">High-twist Tropical Virgin Wool &bull; Concealed Hook Tab</p>
+              
+              <div class="product-selectors">
+                <div class="color-swatches" aria-label="Choose color">
+                  <button type="button" class="color-dot active" style="--swatch-color: #E2DDD5" title="Ecru" data-color="Ecru"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #6C6B66" title="Heather Stone" data-color="Heather Stone"></button>
+                  <button type="button" class="color-dot" style="--swatch-color: #212120" title="Midnight Charcoal" data-color="Midnight Charcoal"></button>
+                </div>
+
+                <div class="size-options" aria-label="Choose size">
+                  <button type="button" class="size-pill" data-size="XS">XS</button>
+                  <button type="button" class="size-pill" data-size="S">S</button>
+                  <button type="button" class="size-pill active" data-size="M">M</button>
+                  <button type="button" class="size-pill" data-size="L">L</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 7. EDITORIAL FASHION BANNER                               -->
+    <!-- ========================================================= -->
+    <section class="campaign-banner-section" id="campaign" aria-label="Editorial Campaign">
+      <div class="banner-media-container">
+        <img 
+          src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=2200&q=85" 
+          alt="Wide cinematic fashion campaign landscape with models in contemporary movement" 
+          class="banner-image"
+          loading="lazy"
+        >
+        <div class="banner-scrim"></div>
+      </div>
+
+      <div class="banner-content reveal-on-scroll">
+        <div class="banner-meta">
+          <span class="meta-line"></span>
+          <span class="meta-text">CAMPAIGN AUTUMN / WINTER 2026</span>
+          <span class="meta-line"></span>
+        </div>
+
+        <h2 class="banner-headline">
+          “YOUR STYLE.<br><span class="italic-serif">YOUR STORY.”</span>
+        </h2>
+
+        <p class="banner-subtext">
+          A visual tribute to individuality, mindful curation, and the effortless poetry of quiet confidence.
+        </p>
+
+        <div class="banner-action">
+          <a href="#newsletter" class="btn btn-outline" id="discover-more-btn">
+            <span>DISCOVER MORE</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 8. NEWSLETTER SECTION                                     -->
+    <!-- ========================================================= -->
+    <section class="section newsletter-section" id="newsletter" aria-label="Newsletter Subscription">
+      <div class="container container-narrow">
+        
+        <div class="newsletter-card reveal-on-scroll">
+          <div class="newsletter-emblem">A</div>
+          
+          <span class="newsletter-kicker">PRIVATE DISPATCHES</span>
+          <h2 class="newsletter-headline">A NOTE FROM ATELIER</h2>
+          
+          <p class="newsletter-description">
+            Be the first to receive invitations to seasonal private previews, architectural lookbooks, and contemplative essays on contemporary craftsmanship.
+          </p>
+
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <div class="input-group">
+              <label for="newsletter-email" class="visually-hidden">Email Address</label>
+              <input 
+                type="email" 
+                id="newsletter-email" 
+                class="newsletter-input" 
+                placeholder="Enter your email address" 
+                required 
+                autocomplete="email"
+              >
+              <button type="submit" class="newsletter-submit-btn" id="newsletter-submit-btn">
+                <span>SUBSCRIBE</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+          </form>
+
+          <p class="newsletter-disclaimer">
+            By subscribing, you agree to receive editorial correspondences from ATELIER. We respect your peace and never distribute your information. Unsubscribe at any time.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 9. MINIMAL LUXURY FOOTER                                  -->
+  <!-- ========================================================= -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      
+      <!-- Top Tier: Navigation Columns & Brand Statement -->
+      <div class="footer-top-grid">
+        
+        <!-- Brand Identity Column -->
+        <div class="footer-brand-column">
+          <a href="#hero" class="footer-logo">
+            <span class="footer-logo-title">ATELIER</span>
+            <span class="footer-logo-sub">CONTEMPORARY HAUTE READY-TO-WEAR</span>
+          </a>
+          <p class="footer-brand-mission">
+            Timeless essentials. Modern expression. An independent design study exploring architectural silhouettes, sustainable materiality, and the quiet dignity of restraint.
+          </p>
+          <div class="footer-badge-wrap">
+            <span class="f-badge">PARIS</span>
+            <span class="f-dot">&bull;</span>
+            <span class="f-badge">MILANO</span>
+            <span class="f-dot">&bull;</span>
+            <span class="f-badge">TOKYO</span>
+            <span class="f-dot">&bull;</span>
+            <span class="f-badge">NEW YORK</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Collections -->
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="#featured">New Arrivals</a></li>
+            <li><a href="#featured">Everyday Essentials</a></li>
+            <li><a href="#featured">Statement Pieces</a></li>
+            <li><a href="#bestsellers">Tailored Blazers</a></li>
+            <li><a href="#bestsellers">Cashmere & Silk</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Atelier Story -->
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Maison</h4>
+          <ul class="footer-links-list">
+            <li><a href="#story">Brand Philosophy</a></li>
+            <li><a href="#story">Architectural Drape</a></li>
+            <li><a href="#story">Mindful Materiality</a></li>
+            <li><a href="#campaign">Campaign 2026</a></li>
+            <li><a href="#newsletter">Private Dispatches</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Client Concierge & Care -->
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Client Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="#site-header" class="footer-service-link" data-service="care">Garment Preservation</a></li>
+            <li><a href="#site-header" class="footer-service-link" data-service="sizing">Silhouette Sizing Guide</a></li>
+            <li><a href="#site-header" class="footer-service-link" data-service="shipping">Complimentary Delivery</a></li>
+            <li><a href="#site-header" class="footer-service-link" data-service="returns">Exchanges & Atelier Return</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Tier: Legal, Portfolio Disclaimer & Back-to-Top -->
+      <div class="footer-bottom-bar">
+        
+        <div class="footer-copyright-wrap">
+          <p class="copyright-text">&copy; 2026 ATELIER STUDIO. ALL RIGHTS RESERVED.</p>
+          <p class="disclaimer-text">
+            PORTFOLIO DEMONSTRATION ONLY &bull; Fictional concept fashion brand website. All images courtesy of Unsplash editorial photographers.
+          </p>
+        </div>
+
+        <div class="footer-actions">
+          <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+            <span>BACK TO TOP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- INTERACTIVE LUXURY SHOPPING BAG SLIDE-OVER DRAWER         -->
+  <!-- ========================================================= -->
+  <div class="bag-drawer-backdrop" id="bag-backdrop"></div>
+  <aside class="bag-drawer" id="bag-drawer" aria-label="Your Shopping Bag" aria-hidden="true">
+    <div class="bag-drawer-header">
+      <div class="bag-header-title-wrap">
+        <h3 class="bag-title">SHOPPING BAG</h3>
+        <span class="bag-items-badge" id="drawer-items-count">(0 items)</span>
+      </div>
+      <button type="button" class="bag-close-btn" id="bag-close-btn" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress Bar Indicator -->
+    <div class="shipping-threshold-meter">
+      <p class="meter-text" id="meter-text">Add $250 more for complimentary global delivery</p>
+      <div class="meter-track">
+        <div class="meter-fill" id="meter-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Bag Items Scroll Area -->
+    <div class="bag-items-list" id="bag-items-list">
+      <!-- Empty Bag State (Default) -->
+      <div class="bag-empty-state" id="bag-empty-state">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="empty-icon">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p class="empty-title">Your shopping bag is empty</p>
+        <p class="empty-sub">Explore our curated chapters and select timeless essentials.</p>
+        <a href="#bestsellers" class="btn btn-secondary empty-browse-btn" id="empty-browse-btn">DISCOVER BEST SELLERS</a>
+      </div>
+    </div>
+
+    <!-- Bag Drawer Footer -->
+    <div class="bag-drawer-footer" id="bag-drawer-footer">
+      <div class="bag-summary-row">
+        <span>Subtotal</span>
+        <span class="summary-val" id="bag-subtotal">$0</span>
+      </div>
+      <div class="bag-summary-row">
+        <span>Delivery</span>
+        <span class="summary-val" id="bag-shipping">Complimentary</span>
+      </div>
+      <div class="bag-summary-divider"></div>
+      <div class="bag-summary-row total-row">
+        <span>Estimated Total</span>
+        <span class="summary-total" id="bag-total">$0</span>
+      </div>
+      <button type="button" class="btn btn-primary checkout-btn" id="checkout-btn">
+        <span>PROCEED TO CHECKOUT</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+      <p class="checkout-guarantee">Complimentary carbon-neutral worldwide delivery &bull; 30-day effortless returns</p>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- TOAST NOTIFICATION CONTAINER                              -->
+  <!-- ========================================================= -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <div class="toast-content">
+      <span class="toast-icon">&#10003;</span>
+      <span class="toast-message" id="toast-message">Item added to bag</span>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
